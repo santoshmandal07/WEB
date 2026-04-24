@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite College - Your Future Starts Here</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="logo">🎓 Elite College</div>
+            <nav>
+                <ul>
+                    <li><a onclick="showSection('home')">Home</a></li>
+                    <li><a onclick="showSection('about')">About</a></li>
+                    <li><a onclick="showSection('courses')">Courses</a></li>
+                    <li><a onclick="showSection('admission')">Admission</a></li>
+                    <li><a onclick="showSection('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="active">
+        <div class="hero">
+            <h1>Welcome to Elite College</h1>
+            <p>Empowering students with knowledge, skills, and opportunities for a brighter future</p>
+            <button class="btn" onclick="showSection('admission')">Apply Now</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Elite College</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>Elite College is committed to providing world-class education that develops critical thinking, 
+                    creativity, and leadership skills in our students. We believe in holistic development through 
+                    academic excellence and practical experience.</p>
+                    
+                    <h3 style="margin-top: 30px;">Why Choose Us?</h3>
+                    <ul class="about-features">
+                        <li>Expert faculty with industry experience</li>
+                        <li>State-of-the-art campus facilities</li>
+                        <li>Industry partnerships and internships</li>
+                        <li>Scholarship opportunities</li>
+                        <li>Career support and placement assistance</li>
+                        <li>Vibrant student community</li>
+                    </ul>
+                </div>
+                <div class="about-text">
+                    <h3>Our Vision</h3>
+                    <p>To be a leading institution that nurtures talented individuals into responsible global citizens 
+                    and successful professionals, contributing meaningfully to society and the economy.</p>
+                    
+                    <h3 style="margin-top: 30px;">Quick Facts</h3>
+                    <ul class="about-features">
+                        <li>Established: 2015</li>
+                        <li>Student Strength: 5000+</li>
+                        <li>Faculty Members: 300+</li>
+                        <li>Academic Programs: 25+</li>
+                        <li>International Partnerships: 15+</li>
+                        <li>Placement Rate: 95%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses">
+        <div class="container">
+            <h2>Our Academic Programs</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <h3>Computer Science</h3>
+                    <p>Master modern programming languages, software development, cloud computing, and AI/ML technologies. 
+                    Hands-on projects and industry partnerships prepare you for tech careers.</p>
+                    <span class="course-duration">4 Years</span>
+                </div>
+
+                <div class="course-card">
+                    <h3>Business Administration</h3>
+                    <p>Develop business acumen, leadership skills, and entrepreneurial thinking. Learn management, 
+                    finance, marketing, and strategic planning from experienced professionals.</p>
+                    <span class="course-duration">4 Years</span>
+                </div>
+
+                <div class="course-card">
+                    <h3>Engineering</h3>
+                    <p>Study mechanical, electrical, and civil engineering with practical labs. Build real-world projects 
+                    and gain the skills needed for engineering excellence.</p>
+                    <span class="course-duration">4 Years</span>
+                </div>
+
+                <div class="course-card">
+                    <h3>Medical Sciences</h3>
+                    <p>Comprehensive medical education with modern clinical facilities. Trained to become competent, 
+                    compassionate healthcare professionals serving the community.</p>
+                    <span class="course-duration">5 Years</span>
+                </div>
+
+                <div class="course-card">
+                    <h3>Arts & Sciences</h3>
+                    <p>Explore humanities, social sciences, and pure sciences. Critical thinking and research skills 
+                    for diverse career opportunities in education, law, and public service.</p>
+                    <span class="course-duration">3 Years</span>
+                </div>
+
+                <div class="course-card">
+                    <h3>Commerce</h3>
+                    <p>Study accounting, economics, business law, and finance. Prepare for careers in banking, 
+                    accounting, auditing, and financial management.</p>
+                    <span class="course-duration">3 Years</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Form Section -->
+    <section id="admission">
+        <div class="container">
+            <h2>Admission Form</h2>
+            <div class="form-container">
+                <div class="success-message" id="successMessage">
+                    ✓ Your application has been submitted successfully! We will contact you soon.
+                </div>
+                
+                <form id="admissionForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                        <div class="error-message">Full name is required and must be at least 3 characters</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                        <div class="error-message">Please enter a valid email address</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your 10-digit phone number">
+                        <div class="error-message">Please enter a valid 10-digit phone number</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date" id="dob" name="dob">
+                        <div class="error-message">Please select your date of birth</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" value="Male"> Male</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                            <label><input type="radio" name="gender" value="Other"> Other</label>
+                        </div>
+                        <div class="error-message">Please select your gender</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course">Select Course *</label>
+                        <select id="course" name="course">
+                            <option value="">-- Choose a course --</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Business Administration">Business Administration</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Medical Sciences">Medical Sciences</option>
+                            <option value="Arts & Sciences">Arts & Sciences</option>
+                            <option value="Commerce">Commerce</option>
+                        </select>
+                        <div class="error-message">Please select a course</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="percentage">12th Grade Percentage *</label>
+                        <input type="number" id="percentage" name="percentage" placeholder="Enter your percentage (0-100)" 
+                               min="0" max="100" step="0.01">
+                        <div class="error-message">Please enter a valid percentage between 0 and 100</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address *</label>
+                        <textarea id="address" name="address" placeholder="Enter your full address"></textarea>
+                        <div class="error-message">Address is required</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interest">Areas of Interest</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="interest" value="Sports"> Sports</label>
+                            <label><input type="checkbox" name="interest" value="Arts"> Arts</label>
+                            <label><input type="checkbox" name="interest" value="Technology"> Technology</label>
+                            <label><input type="checkbox" name="interest" value="Debate"> Debate</label>
+                            <label><input type="checkbox" name="interest" value="Research"> Research</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label><input type="checkbox" id="terms" name="terms" required> I agree to the terms and conditions *</label>
+                        <div class="error-message">You must agree to the terms and conditions</div>
+                    </div>
+
+                    <button type="submit" class="form-btn">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <strong>📍 Address</strong>
+                        <p>Elite College Campus<br>123 Education Avenue<br>New Delhi, India - 110001</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>📞 Phone</strong>
+                        <p>+91 (011) 1234-5678<br>+91 (011) 8765-4321</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>📧 Email</strong>
+                        <p>admissions@elitecollege.edu<br>info@elitecollege.edu</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>🕒 Office Hours</strong>
+                        <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday: 10:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Your Name</label>
+                            <input type="text" id="contactName" name="contactName" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Your Email</label>
+                            <input type="email" id="contactEmail" name="contactEmail" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="form-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Elite College. All rights reserved.</p>
+        <p>Empowering Education | Building Future Leaders</p>
+    </footer>
+
+    <script>
+        // Navigation and Section Display
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Admission Form Validation
+        const admissionForm = document.getElementById('admissionForm');
+        
+        if (admissionForm) {
+            admissionForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Clear all previous errors
+                document.querySelectorAll('.form-group').forEach(group => {
+                    group.classList.remove('error');
+                });
+
+                let isValid = true;
+
+                // Validate Full Name
+                const fullName = document.getElementById('fullName');
+                if (fullName.value.trim().length < 3) {
+                    fullName.parentElement.classList.add('error');
+                    isValid = false;
+                }
+
+                // Validate Email
+                const email = document.getElementById('email');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email.value)) {
+                    email.parentElement.classList.add('error');
+                    isValid = false;
+                }
+
+                // Validate Phone
+                const phone = document.getElementById('phone');
+                const phoneRegex = /^\d{10}$/;
+                if (!phoneRegex.test(phone.value.replace(/\D/g, ''))) {
+                    phone.parentElement.classList.add('error');
+                    isValid = false;
+                }
+
+                // Validate Date of Birth
+                const dob = document.getElementById('dob');
+                if (!dob.value) {
+                    dob.parentElement.classList.add('error');
+                    isValid = false;
+                }
+
+                // Validate Gender
+                const genders = document.querySelectorAll('input[name="gender"]');
+                const genderSelected = Array.from(genders).some(g => g.checked);
+                if (!genderSelected) {
+                    genders[0].parentElement.parentElement.parentElement.classList.add('error');
+                    isValid = false;
+                }
+
+                // Validate Course
+                const course = document.getElementById('course');
+                if (!course.value) {
+                    course.parentElement.classList.add('error');
+                    isValid = false;
+                }
+
+                // Validate Percentage
+                const percentage = document.getElementById('percentage');
+                const percentValue = parseFloat(percentage.value);
+                if (isNaN(percentValue) || percentValue < 0 || percentValue > 100) {
+                    percentage.parentElement.classList.add('error');
+                    isValid = false;
+                }
+
+                // Validate Address
+                const address = document.getElementById('address');
+                if (address.value.trim().length < 5) {
+                    address.parentElement.classList.add('error');
+                    isValid = false;
+                }
+
+                // Validate Terms
+                const terms = document.getElementById('terms');
+                if (!terms.checked) {
+                    terms.parentElement.parentElement.classList.add('error');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    // Show success message
+                    document.getElementById('successMessage').style.display = 'block';
+                    
+                    // Reset form
+                    admissionForm.reset();
+
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        document.getElementById('successMessage').style.display = 'none';
+                    }, 5000);
+                }
+            });
+        }
+
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            });
+        }
+
+        // Set default active section
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('home');
+        });
+    </script>
+</body>
+</html>
